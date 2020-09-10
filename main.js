@@ -37,7 +37,26 @@ function expect(target) {
 //
 // ONLY ADD CODE TO THIS SECTION
 
+function Dog({hungry = true} = {}) {
+  this.status = 'normal';
+  this.color = 'red';
+  this.hungry = hungry;
+};
 
+function Human({cool = false} = {}) {
+  this.cool = cool;
+};
+
+Human.prototype.pet = function Dog(dog){
+  dog.status ='happy';
+}
+Dog.prototype.hungry = function(isHungry) {
+  isHungry.hungry = oz.hungry;
+}
+
+Human.prototype.feed = function Dog(notHungry){
+  notHungry.hungry = false;
+}
 
 
 //        __
